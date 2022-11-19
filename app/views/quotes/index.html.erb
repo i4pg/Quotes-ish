@@ -7,6 +7,10 @@
                 data: { turbo_frame: dom_id(Quote.new) } %>
   </div>
 
+  <%# this stream will lestin to broadcast that coming from quote model %>
+  <%= turbo_stream_from "quotes" %>
+
+  <%# This frame will appear the create form when data turbo frame clicked %>
   <%= turbo_frame_tag Quote.new %>
 
   <%= turbo_frame_tag "quotes" do %>
