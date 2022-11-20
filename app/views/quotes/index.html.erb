@@ -8,7 +8,7 @@
   </div>
 
   <%# this stream will lestin to broadcast that coming from quote model %>
-  <%= turbo_stream_from "quotes" %>
+  <%= turbo_stream_from current_company, "quotes" %>
 
   <%# This frame will appear the create form when data turbo frame clicked %>
   <%= turbo_frame_tag Quote.new %>
